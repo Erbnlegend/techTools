@@ -1,0 +1,12 @@
+#tripsForm {
+  display: flex;
+  flex-direction: column;
+  & input {
+    font-size: 1.2rem;
+  }
+  & button {
+    color: white;
+    background-color: var(--main-color);
+    margin: 15px 0;
+  }
+}

@@ -1,0 +1,8 @@
+:root {
+  font-size: 16px;
+  --main-color: rgb(28,36,81);
+  --main-shadow-color: #3d3939;
+  --main-opac: #1c245195;
+  --warning: rgba(255, 0, 0, 0.438);
+  --green-ok: rgba(0, 200, 0, 0.438);
+}

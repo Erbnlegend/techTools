@@ -1,0 +1,55 @@
+#userForm {
+  background-color: rgba(0,0,0,.2);
+  z-index: 5;
+  position: fixed;
+  padding: 50px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  & .modal {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: 0 0 5px 1px #000;
+    max-width: 45vw;
+    margin: 0 auto;
+    padding: 25px;
+  }
+  & .userFormMenu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  & .userFormMenu svg {
+    color: red;
+    width: 50px;
+    height: 50px;
+  }
+  & .userFormMenu svg:hover {
+    cursor: pointer;
+  }
+  & select, button {
+    background-color: var(--main-color);
+    box-shadow: 0 0 3px 2px var(--main-shadow-color);
+    color: white;
+    text-align: center;
+    outline: none;
+    border: none;
+    font-size: 1.2rem;
+    padding: 15px;
+  }
+  & button:hover {
+    cursor: pointer;
+    box-shadow: 0 0 2px 1px var(--main-shadow-color);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #userForm {
+    & .modal {
+      max-width: 75vw;
+    }
+  }
+}

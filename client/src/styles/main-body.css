@@ -1,0 +1,127 @@
+body {
+  margin: 0;
+  background-color: rgb(240,240,240);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+h1 {
+  color: var(--main-color);
+  letter-spacing: .2rem;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+a {
+  color: inherit;
+}
+
+.backIcon {
+  color: var(--main-color);
+  width: 75px;
+  height: 75px;
+}
+
+.flex {
+  display: flex;
+  align-items: end;
+}
+
+.small-txt {
+  font-size: .8rem;
+}
+
+.wrapper, .actionsWrapper {
+  padding: 20px;
+  max-width: 70vw;
+  margin: 50px auto;
+  & span {
+    font-weight: bolder;
+    font-size: 1.1rem;
+  }
+  & .dueToday {
+    margin: 25px 0;
+  }
+  & .summary {
+    margin-bottom: 25px;
+  }
+  & .caseStatuses {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  & .switch {
+    background-color: var(--green-ok);
+    justify-content: center;
+    padding: 5px;
+    border-radius: 10px 5px;
+    margin: 0 15px;
+  }
+
+  & select, button {
+    box-shadow: 0 0 3px 1px var(--main-shadow-color);
+    outline: none;
+    border: none;
+    font-size: 1.2rem;
+    padding: 10px;
+  }
+  & .switch:hover {
+    cursor: pointer;
+  }
+}
+
+.wrapper {
+  box-shadow: 0 0 10px 2px var(--main-shadow-color);
+  background-color: #fff;
+  padding: 30px 55px 55px 55px;
+}
+
+.search {
+  display: block;
+  font-size: 1.4rem;
+  min-width: 50%;
+  max-width: 1200px;
+  padding: 10px;
+  margin: 15px auto;
+}
+
+input[type="search"]:focus {
+  outline: none;
+  box-shadow: 0 0 5px 0 var(--main-shadow-color);
+}
+
+nav {
+  margin: 10px 20px;
+}
+
+footer {
+  display: flex;
+  position: relative;
+  bottom: 0;
+  align-items: center;
+  justify-content: center;
+  & h5 {
+    padding: 15px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .wrapper {
+    max-width: 90vw;
+    border: none;
+    padding: 0px;
+    background-color: transparent;
+    box-shadow: none;
+  }
+  .search {
+    width: 90%;
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 2700px) and (max-width: 5000px) {
+  :root {
+    font-size: 32px;
+  }
+}

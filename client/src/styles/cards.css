@@ -1,0 +1,137 @@
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 15px;
+  margin-top: 25px;
+  & .links, .tripsCard {
+    background-color: rgb(220,220,220);
+    padding: 5px 20px 20px 20px;
+    box-shadow: 0 0 3px 1px var(--main-shadow-color);
+  }
+  & .due {
+    padding: 8px;
+    background-color: var(--green-ok);
+    border-radius: 10px 5px;
+    border: none;
+  }
+  & .times {
+    gap: 15px;
+    justify-content: space-around;
+  }
+  & svg.complete {
+    color: var(--green-ok);
+  }
+  & svg.incomplete {
+    color: var(--warning);
+  }
+  & svg.assigned {
+    color: var(--green-ok);
+  }
+  & .links, .card, .tripsCard {
+    border-radius: 2px;
+    text-decoration: none;
+    color: inherit;
+    & .card {
+      width: 100%;
+      height: 100%;
+      text-align: left;
+    }
+    & .created, .modified {
+      color: var(--main-color);
+      font-weight: bold;
+      text-align: right;
+      font-size: .7rem;
+    }
+    & .labor {
+      font-size: 1.1rem;
+      padding: 15px;
+    }
+    & .timerButtons {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      & .red {
+        background-color: var(--warning);
+      }
+    }
+    & .tech {
+      text-align: center;
+      font-size: 1.1rem;
+      font-weight: bolder;
+    }
+    & .techList {
+      font-size: 1rem;
+      & p {
+        margin: 0;
+      }
+    }
+    & .address {
+      max-width: 25ch;
+      font-size: .8rem;
+      padding: 5px;
+    }
+    & .title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+      & .small {
+        font-size: .6rem;
+      }
+      & .service {
+        font-size: 1.1rem;
+        font-weight: bold;
+      }
+    }
+    & .trips {
+      font-size: 1.1rem;
+      margin: 5px 0;
+      font-weight: bolder;
+    }
+  }
+  & .show {
+    display: flex;
+    flex-direction: column;
+  }
+  & .hide {
+    display: none;
+  }
+  & .links:hover {
+    cursor: pointer;
+    background-color: var(--main-opac);
+  }
+  & .tripsCard:hover {
+    cursor: auto;
+  }
+  & button.update {
+    background-color: var(--main-color);
+    border: none;
+    font-size: 1.2rem;
+    display: block;
+    padding: 20px 10px;
+    width: 85%;
+    color: white;
+    margin: 5px auto;
+  }
+  & button.update:hover {
+    cursor: pointer;
+    opacity: var(--main-opac);
+  }
+}
+input.due {
+  font-family: inherit;
+  font-size: 1.1rem;
+  padding: 8px 15px;
+  background-color: var(--green-ok);
+  border-radius: 10px 5px;
+  border: none;
+}
+input.due:hover {
+  transform: scale(1.1);
+}
+
+@media screen and (max-width: 450px) {
+  .cards {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
